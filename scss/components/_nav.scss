@@ -1,0 +1,133 @@
+@use '../abstracts/variables' as *;
+
+.nav {
+
+  // --- Десктопные стили (База) ---
+  &__list {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  &__item {
+    text-align: center;
+    position: relative; // База для выпадашки
+
+    // Показываем меню при наведении (Десктоп)
+    &:hover {
+      .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    // Состояние для клика на мобилках (управляется JS)
+    &.is-active {
+      .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__link {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.25rem;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  // --- Выпадающее меню (Десктоп по умолчанию) ---
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: var(--color-bg-dark);
+    padding: 15px 0;
+    list-style: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    // Скрытое состояние для анимации
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+
+    &__link {
+      display: block;
+      padding: 8px 20px;
+      color: var(--color-text-light);
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.2s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  // --- Адаптив (Мобильное меню) ---
+  @media (max-width: $breakpoint-mobile) {
+    position: fixed;
+    top: 0;
+    right: -100%; // Спрятано
+    width: 80%;
+    height: 100vh;
+    background-color: var(--color-bg-dark);
+    padding: 100px 40px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+
+    &--open {
+      right: 0; // Выезжает
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__link {
+      font-size: 1.5rem;
+    }
+
+    // Переопределяем выпадашку для мобилок
+    .dropdown-menu {
+      position: static; // В потоке текста
+      opacity: 0; // Скрыто по умолчанию
+      visibility: hidden;
+      display: none; // Чтобы не занимало место
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      transform: none;
+      padding: 10px 0 10px 20px;
+
+      &__link {
+        font-size: 1.1rem;
+        padding: 8px 0;
+      }
+    }
+
+    // Показываем, когда родитель получил класс is-active через JS
+    &__item.is-active .dropdown-menu {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+}

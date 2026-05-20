@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  color: var(--color-text-dark);
+  background-color: var(--color-accent);
+}

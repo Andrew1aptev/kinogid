@@ -1,0 +1,118 @@
+@use '../abstracts/variables' as *;
+
+.rubric {
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    border-radius: var(--border-radius);
+    align-self: center;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 10px 20px;
+
+    @media (max-width: 630px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+
+    @media (max-width: 630px) {
+      margin-bottom: 30px;
+      padding: 0 15px; // Добавляем отступы для узких экранов
+    }
+  }
+
+  &__article {
+    display: flex; // Ставим картинку и текст в один ряд
+    gap: 40px; // Расстояние между ними
+    margin-bottom: 50px; // Отступ между самими карточками
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 24px;
+    padding: 20px;
+
+    @media (max-width: 850px) {
+      flex-direction: column; // На мобилках картинка будет сверху текста
+      gap: 15px;
+      padding: 15px; // Добавляем отступы внутри карточки на мобилках
+    }
+
+    &-link:first-child {
+      flex-shrink: 0; // Чтобы картинка не сжималась
+      width: 40%; // Картинка занимает 40% ширины карточки
+
+      @media (max-width: 850px) {
+        width: 100%; // На мобилках на всю ширину
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02); // Легкий зум при наведении на фото
+      }
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; // Кнопка и текст прижаты к левому краю
+
+      @media (max-width: 630px) {
+        padding: 0 15px; // Добавляем отступы для узких экранов
+      }
+    }
+
+    &-title {
+      font-size: 1.75rem;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    &-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      opacity: 0.8;
+      padding-right: 20px; // Добавляем отступ справа для текста
+    }
+  }
+
+  &__pages {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__page-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+
+    &--active {
+      background-color: var(--color-accent);
+    }
+  }
+}

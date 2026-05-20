@@ -1,0 +1,237 @@
+.dictionary {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+  }
+
+  &__title,
+  &__subtitle,
+  &__category-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__category-title {
+    // background-color: var(--color-accent);
+    // color: var(--color-text-dark);
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+  }
+
+  &__category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    &-button {
+      border: none;
+      padding: 20px 40px;
+      font-weight: 700;
+      border-radius: var(--border-radius);
+      transition: background-color .3s ease;
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-light);
+    }
+
+    &-button--active {
+      border: 1px solid var(--color-bg-dark);
+      background-color: var(--color-accent);
+      color: var(--color-text-d);
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.dictionary__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* ХАК: Заставляем блок растягиваться во всю ширину */
+  max-width: 800px;
+  /* Ограничиваем максимальную ширину на ПК */
+  box-sizing: border-box;
+  /* Защита от вылезания паддингов, если они появятся */
+}
+
+.dictionary__letter {
+  font-weight: 700;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: 20px 30px;
+  border-radius: var(--border-radius);
+  align-self: self-start;
+  margin-bottom: 10px;
+}
+
+.dictionary__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dictionary__item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: var(--border-radius);
+}
+
+.dictionary__empty {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+  padding: 30px 0;
+  font-family: sans-serif;
+}
+
+
+.dictionary__definition-title {
+  text-decoration: underline;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dictionary__definition-title,
+.dictionary__definition-subtitle {
+  font-weight: 700;
+}
+
+.dictionary__definition-subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.dictionary__definition-text {
+  margin-bottom: 10px;
+}
+
+.letter-picker {
+  display: grid;
+  /* По умолчанию на мобильных: 4 колонки одинаковой ширины */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Скрываем стандартный кружок радиокнопки */
+.letter-picker input[type="radio"] {
+  display: none;
+}
+
+/* Стилизуем обертку-плашку */
+.letter-picker label {
+  display: block;
+  user-select: none;
+}
+
+/* Стиль самой кнопки с буквой */
+.letter-picker span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+  /* Серый цвет ненажатой кнопки */
+  color: #333;
+  padding: 12px 0;
+  /* Высота кнопки, чтобы было удобно попадать пальцем */
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  /* Скругление углов */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #ddd;
+}
+
+/* Эффект при наведении (для ПК) */
+.letter-picker label:hover span {
+  background-color: #e4e6eb;
+}
+
+/* Стиль кнопки, когда она выбрана (активна) */
+.letter-picker input[type="radio"]:checked + span {
+  background-color: var(--color-accent);
+  /* Красивый синий цвет (как на iOS) */
+  color: var(--color-bg-dark);
+  border-color: var(--color-bg-dark);
+}
+
+/* Адаптивность: для экранов шире 480px (планшеты и ПК) делаем 7 колонок */
+@media (min-width: 480px) {
+  .letter-picker {
+    grid-template-columns: repeat(7, 1fr);
+    max-width: 450px;
+    /* Ограничиваем общую ширину на ПК, чтобы не растягивалось во весь экран */
+  }
+}
+
+.dictionary__search {
+  position: relative;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#dictionary-search-input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-bg-dark);
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+}
+
+.dictionary__search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-bg-grey);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  border-top: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.dictionary__search-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dictionary__search-item:hover {
+  background-color: var(--color-accent);
+  /* Цвет ховера под твою тему */
+}
+
+.dictionary__search-results.--hidden {
+  display: none;
+}
+
+.term-cat {
+  font-size: 0.85em;
+  color: #888;
+}

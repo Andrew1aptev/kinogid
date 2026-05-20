@@ -1,0 +1,164 @@
+@use '../abstracts/variables' as *;
+
+.popular {
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    border-radius: var(--border-radius);
+    max-width: 800px;
+    margin: 0 auto 20px;
+
+    @media (max-width: 630px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__rubric {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: #f5f5f5;
+
+    @media (max-width: 630px) {
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      display: block;
+      align-self: center;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 1.5rem;
+      color: var(--color-text-dark);
+      background-color: var(--color-accent);
+      border-radius: var(--border-radius);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translate(5px, -4px);
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+
+    @media (max-width: 630px) {
+      margin-bottom: 30px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__card-link-all {
+    align-self: center;
+    justify-self: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    // МАГИЯ ОДИНАКОВОЙ ШИРИНЫ И ЖИВОЙ ВЫСОТЫ:
+    flex: 0 0 340px;
+    width: 340px;
+    height: auto; // Карточка сжимается, убирая пустую дыру снизу
+
+    @media (max-width: 630px) {
+      flex: 1 1 auto;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px; // Фиксированная зона для фотографии
+      flex-shrink: 0; // Запрещаем сжимать картинку
+      overflow: hidden;
+    }
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Защита от сплющивания
+      object-position: center top; // Держим лица в кадре
+      transition: transform 0.5s ease;
+    }
+
+    &-content {
+      flex-grow: 1; // Заставляет блок текста занять всё свободное место
+      display: flex;
+      flex-direction: column;
+      padding: 25px; // Одинаковые аккуратные отступы вокруг текста
+    }
+
+    &-category {
+      display: block;
+      font-size: 0.85rem;
+      text-transform: capitalize;
+      text-decoration: underline;
+      opacity: 0.8;
+      margin-bottom: 6px;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 8px;
+
+      // Резервируем строго 2 строки для заголовка
+      height: 2.88rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &-description {
+      font-size: 0.9rem;
+      line-height: 1.3;
+      color: rgba(255, 255, 255, 0.75);
+
+      // Резервируем строго 2 строки для описания + магия троеточия
+      height: 2.34rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    // Эффект зума при наведении на карточку
+    &:hover {
+      .popular__card-image {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

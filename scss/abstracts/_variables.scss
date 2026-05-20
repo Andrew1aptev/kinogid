@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #ececec;
+  --color-bg-grey: #f5f4f4;
+  --color-text-dark: #000000;
+  --color-text-light: #ffffff;
+  --color-bg-dark: #191818;
+  --color-accent: #e9d541; // Яркий акцентный цвет (например, для ссылок и кнопок)
+  --border-radius: 20px;
+  // шрифты
+  --font-main: 'Ubuntu', sans-serif;
+
+  // контейнеры
+  --container-width: 1200px;
+  --container-padding: 20px;
+}
+
+// breakpoints
+$breakpoint-mobile: 767px;

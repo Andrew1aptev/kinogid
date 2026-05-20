@@ -1,0 +1,112 @@
+@use '../abstracts/variables' as *;
+
+.hero {
+
+  // Контейнер-оболочка слайдера, ограничивающий видимость текущим слайдом
+  &__slider {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+  }
+
+  // Лента (трек) со всеми слайдами. Сдвигается через transform
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); // Плавная физика анимации
+    will-change: transform; // Подсказка браузеру для рендеринга через GPU
+  }
+
+  // Каждый отдельный слайд
+  &__slide {
+    flex: 0 0 100%; // Слайд строго занимает 100% ширины трека
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+    // Градиентный оверлей для читаемости текста на любом фоне
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.4) 60%,
+          rgba(0, 0, 0, 0.1) 100%);
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    max-width: 710px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 120px 50px;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 60px 20px 80px; // Чуть увеличили отступ снизу под точки на мобилках
+    }
+  }
+
+  &__title {
+    color: var(--color-text-light);
+
+    @media (max-width: 480px) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__description {
+    max-width: 615px;
+    color: var(--color-text-light);
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 30px;
+
+    // Магия центрирования:
+    left: 50%; // Сдвигаем левый край контейнера ровно на середину слайдера
+    transform: translateX(-50%); // Сдвигаем сам контейнер обратно влево на половину его собственной ширины
+
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+
+    // На мобилках центрирование тоже отлично отработает, 
+    // но если захочется изменить отступ от низа, можно поправить bottom
+    @media (max-width: $breakpoint-mobile) {
+      bottom: 25px;
+    }
+  }
+
+  // Кнопки-точки
+  &__dot {
+    all: unset; // Полный сброс дефолтных стилей браузера для <button>
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &--active {
+      background-color: var(--color-text-light);
+      transform: scale(1.2); // Активная точка становится чуть больше
+    }
+  }
+}

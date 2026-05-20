@@ -1,0 +1,26 @@
+// 1. Абстракции
+@use 'abstracts/variables';
+
+// 2. База
+@use 'base/normalize';
+@use 'base/typography';
+@use 'base/base';
+
+// 3. Сетка и общие блоки
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/grid';
+
+// 4. Компоненты
+@use 'components/nav';
+@use 'components/burger';
+@use 'components/article';
+@use 'components/dictionary';
+@use 'components/interview';
+@use 'components/list';
+@use 'components/about';
+@use 'components/rubric';
+@use 'components/rubrics-all';
+@use 'components/popular';
+@use 'components/logo';
+@use 'components/hero';

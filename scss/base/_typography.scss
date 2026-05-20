@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as *;
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-main);
+}
+
+p {
+  font-size: 1rem; //16px
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.125rem; //50px
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 2.25rem; //36px
+  }
+}
+
+h2 {
+  font-size: 2.25rem; //36px
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1.75rem; //28px
+  }
+}
+
+h3 {
+  font-size: 1.25rem; //20px
+
+  @media (max-width: 676px) {
+    font-size: 1.125rem; //18px
+  }
+}
+
+h4 {
+  font-size: 1.125rem; //18px
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1rem; //16px
+  }
+}
