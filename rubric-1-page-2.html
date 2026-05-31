@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Киногид - словарь</title>
+  <title>Киногид - Кинотерапия</title>
   <link rel="stylesheet" href="./css/main.min.css">
-  <script src="./js/dictionary-data.js" defer></script>
-  <script src="./js/dictionary-main.js" defer></script>
   <script src="./js/main.js" defer></script>
 </head>
 
@@ -47,72 +45,34 @@
     </div>
   </header>
   <main class="main">
-    <section class="dictionary">
-      <div class="container">
-        <div class="dictionary__wrapper">
-          <h1 class="dictionary__title">Словарь</h1>
-          <p class="dictionary__subtitle">Полезные термины и определения</p>
-          <div class="dictionary__category">
-            <button class="dictionary__category-button dictionary__category-button--active"
-              data-category="scriptwriting">Сценарные приемы</button>
-            <button class="dictionary__category-button" data-category="costume">Костюм и стиль</button>
-            <button class="dictionary__category-button" data-category="tech">Кинотехнологии</button>
-          </div>
-          <h2 class="dictionary__category-title" id="current-category-title">Сценарные приемы</h2>
-          <div class="dictionary__search">
-            <input type="text" id="dictionary-search-input" placeholder="Поиск по терминам..." autocomplete="off" />
-            <ul id="dictionary-search-results" class="dictionary__search-results --hidden"></ul>
-          </div>
-          <div class="letter-picker" autocomplete="off">
-            <label><input type="radio" name="letter" value="А"><span>А</span></label>
-            <label><input type="radio" name="letter" value="Б"><span>Б</span></label>
-            <label><input type="radio" name="letter" value="В"><span>В</span></label>
-            <label><input type="radio" name="letter" value="Г"><span>Г</span></label>
-            <label><input type="radio" name="letter" value="Д"><span>Д</span></label>
-            <label><input type="radio" name="letter" value="Е"><span>Е</span></label>
-            <label><input type="radio" name="letter" value="Ж"><span>Ж</span></label>
-            <label><input type="radio" name="letter" value="З"><span>З</span></label>
-            <label><input type="radio" name="letter" value="И"><span>И</span></label>
-            <label><input type="radio" name="letter" value="К"><span>К</span></label>
-            <label><input type="radio" name="letter" value="Л"><span>Л</span></label>
-            <label><input type="radio" name="letter" value="М"><span>М</span></label>
-            <label><input type="radio" name="letter" value="Н"><span>Н</span></label>
-            <label><input type="radio" name="letter" value="О"><span>О</span></label>
-            <label><input type="radio" name="letter" value="П"><span>П</span></label>
-            <label><input type="radio" name="letter" value="Р"><span>Р</span></label>
-            <label><input type="radio" name="letter" value="С"><span>С</span></label>
-            <label><input type="radio" name="letter" value="Т"><span>Т</span></label>
-            <label><input type="radio" name="letter" value="У"><span>У</span></label>
-            <label><input type="radio" name="letter" value="Ф"><span>Ф</span></label>
-            <label><input type="radio" name="letter" value="Х"><span>Х</span></label>
-            <label><input type="radio" name="letter" value="Ц"><span>Ц</span></label>
-            <label><input type="radio" name="letter" value="Ч"><span>Ч</span></label>
-            <label><input type="radio" name="letter" value="Ш"><span>Ш</span></label>
-            <label><input type="radio" name="letter" value="Щ"><span>Щ</span></label>
-            <label><input type="radio" name="letter" value="Э"><span>Э</span></label>
-            <label><input type="radio" name="letter" value="Ю"><span>Ю</span></label>
-            <label><input type="radio" name="letter" value="Я"><span>Я</span></label>
-          </div>
-
-          <div class="dictionary__content" id="dictionary-content">
-          </div>
-
-          <div class="donation">
-            <p class="donation__text">Понравился проект? Вы можете поддержать авторов монеткой</p>
-            <a href="https://www.donationalerts.com/r/kinogid1" class="donation__link" target="_blank"
-              rel="noopener noreferrer">
-              <!-- SVG-иконка сердца -->
-              <svg class="donation__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                fill="currentColor">
-                <path
-                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>
-              Поддержать КиноГид
+    <section class="rubric">
+      <div class="container rubric__container">
+        <h1 class="rubric__title">Кинотерапия</h1>
+        <p class="rubric__description">Кинотерапия — это рубрика, в которой мы разбираем фильмы и сериалы с точки зрения
+          их психологического влияния на зрителя. Мы анализируем сюжеты, персонажей и темы, чтобы показать, как кино
+          может помочь в понимании и преодолении личных проблем.
+        </p>
+        <div class="rubric__list">
+          <article class="rubric__article">
+            <a href="./article-list4.html" class="rubric__article-link">
+              <img src="./images/articles/lists/article-4/black-swan-big.jpg" alt="Статья 4"
+                class="rubric__article-image">
             </a>
-          </div>
+            <div class="rubric__article-text">
+              <h2 class="rubric__article-title">5 фильмов о борьбе с перфекционизмом</h2>
+              <p class="rubric__article-description">
+                Стремление к недосягаемому идеалу часто приводит к выгоранию. Предлагаем проанализировать эту тему через
+                кино вместе с нами.
+              </p>
+              <a href="./article-list4.html" class="rubric__article-link button">Читать статью</a>
+            </div>
+          </article>
+        </div>
+        <div class="rubric__pages">
+          <a href="./rubric-1.html" class="rubric__page-link rubric__page-link--active">1</a>
+          <a href="./rubric-1-page-2.html" class="rubric__page-link">2</a>
         </div>
       </div>
-
     </section>
   </main>
   <footer class="footer">

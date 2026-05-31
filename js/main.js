@@ -62,3 +62,17 @@ document.addEventListener("click", (e) => {
     toggleMenu();
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const pageLinks = document.querySelectorAll(".rubric__page-link");
+
+  const currentPath = window.location.pathname;
+
+  pageLinks.forEach((link) => {
+    const linkPath = link.pathname;
+    if (currentPath === linkPath) {
+      link.classList.add("rubric__page-link--active");
+    } else {
+      link.classList.remove("rubric__page-link--active");
+    }
+  });
+});
