@@ -10,6 +10,8 @@
 
   &__title {
     font-size: 2rem;
+    align-self: normal;
+    text-transform: uppercase;
     text-align: center;
     background-color: var(--color-bg-dark);
     color: var(--color-text-light);

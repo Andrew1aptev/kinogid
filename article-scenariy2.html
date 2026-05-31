@@ -85,6 +85,19 @@
             <p class="article__text"><span class="article__text--bold">Вывод:</span> люди быстро забывают вашу форму,
               если видят результат.</p>
           </div>
+          <div class="donation">
+            <p class="donation__text">Понравился материал? Вы можете поддержать автора монеткой</p>
+            <a href="https://www.donationalerts.com/r/kinogid1" class="donation__link" target="_blank"
+              rel="noopener noreferrer">
+              <!-- SVG-иконка сердца -->
+              <svg class="donation__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
+                fill="currentColor">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+              Поддержать КиноГид
+            </a>
+          </div>
           <div class="article__item">
             <h2 class="article__subtitle">Правила от главных героев:</h2>
             <ol class="article__list">
@@ -103,6 +116,25 @@
           <div class="article__author-source"><span class="article__text--bold">Источник:</span> Киногид</div>
           <div class="article__author-date"><span class="article__text--bold">Дата публикации:</span> 15 марта 2023
           </div>
+        </div>
+        <div class="feedback">
+          <p class="feedback__text">Поделитесь своим мнением о материале или предложите фильм для следующего разбора!
+          </p>
+          <form action="help-kino.gid@mail.ru" method="POST" class="feedback__form">
+
+            <input type="email" name="email" class="feedback__input" placeholder="Ваш email (опционально)" required>
+
+            <textarea name="message" class="feedback__textarea" placeholder="Ваш отзыв или идея..." required></textarea>
+
+            <button type="submit" class="feedback__button">
+              <svg class="feedback__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
+                fill="currentColor">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+              </svg>
+              Отправить отзыв
+            </button>
+
+          </form>
         </div>
       </div>
       </ul>
@@ -131,9 +163,10 @@
           </ul>
         </nav>
         <nav class="footer__menu">
-          <h3 class="footer__title">по вопросам:</h3>
+          <h3 class="footer__title">Полезные ссылки:</h3>
           <ul class="footer__list">
             <li><a href="mailto:help-kino.gid@mail.ru" class="footer__link">help-kino.gid@mail.ru</a></li>
+            <li><a href="https://www.donationalerts.com/r/kinogid1" class="footer__link">Поддержать проект</a></li>
           </ul>
         </nav>
         <nav class="footer__menu">
@@ -149,18 +182,6 @@
                     fill="black" />
                 </svg>
                 <span class="footer__link-text">ВКонтакте</span>
-              </a>
-            </li>
-
-            <li class="footer__item">
-              <a href="#" class="footer__link" aria-label="Мы в TikTok">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="60" height="60" rx="10" fill="currentColor" />
-                  <path
-                    d="M43.2738 22.0281C41.5551 21.7077 39.9988 20.9173 38.8317 19.772C37.6646 18.6268 36.9477 17.1866 36.7856 15.6614V15H30.8568V35.5053C30.8531 36.4131 30.5232 37.2971 29.9133 38.033C29.3034 38.769 28.4442 39.3199 27.4565 39.6083C26.4688 39.8968 25.4022 39.9083 24.4066 39.6413C23.411 39.3742 22.5365 38.842 21.9058 38.1195C21.2654 37.3848 20.9102 36.4915 20.8916 35.5691C20.873 34.6466 21.1921 33.743 21.8025 32.9893C22.413 32.2355 23.283 31.6708 24.2866 31.377C25.2901 31.0832 26.375 31.0756 27.3838 31.3554V26.106C25.1342 25.835 22.8436 26.1836 20.8325 27.1029C18.8214 28.0223 17.1904 29.4664 16.1675 31.2334C15.1446 33.0004 14.781 35.0018 15.1276 36.9577C15.4743 38.9136 16.5138 40.7262 18.1007 42.1419C19.6141 43.4914 21.5546 44.4172 23.6744 44.8013C25.7943 45.1853 27.9974 45.0101 30.0026 44.2981C32.0077 43.5861 33.7239 42.3695 34.932 40.8036C36.1402 39.2378 36.7855 37.3937 36.7856 35.5068V25.0292C39.1817 26.522 42.0546 27.3224 45 27.3179V22.1841C44.4199 22.1847 43.8414 22.1324 43.2738 22.0281Z"
-                    fill="black" />
-                </svg>
-                <span class="footer__link-text">Tik-tok</span>
               </a>
             </li>
 

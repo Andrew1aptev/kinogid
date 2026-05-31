@@ -50,9 +50,18 @@
   color: #111;
 }
 
+.interview__author-name--bold {
+  font-weight: 700;
+}
+
+.interview__footer {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: var(--border-radius);
+}
+
 .interview__image-wrapper {
   margin: 35px 0;
-  /* Хорошие отступы сверху и снизу от текста */
   width: 100%;
 }
 
