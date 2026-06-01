@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Киногид - твой гид по миру кино</title>
+  <link rel="stylesheet" href="./css/main.min.css">
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <a href="./index.html" class="logo__link">
+          <img class="logo__image" src="./icons/logo.svg" alt="Киногид" class="logo__image">
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link">Главная</a>
+          </li>
+
+          <li class="nav__item nav__item--dropdown"> <a href="./rubrics-all.html" class="nav__link">Разделы</a>
+
+            <ul class="dropdown-menu">
+              <li><a href="./rubric-1.html" class="dropdown-menu__link">Кинотерапия</a></li>
+              <li><a href="./rubric-2.html" class="dropdown-menu__link">Жизнь как сценарий</a></li>
+              <li><a href="./rubric-3.html" class="dropdown-menu__link">Гардероб героя</a></li>
+              <li><a href="./rubric-4.html" class="dropdown-menu__link">После титров</a></li>
+              <li><a href="./dictionary.html" class="dropdown-menu__link">Словарь</a></li>
+            </ul>
+          </li>
+
+          <li class="nav__item">
+            <a href="./about.html" class="nav__link">О нас</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="burger" aria-label="Открыть меню">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+  <main class="main">
+    <section class="list">
+      <div class="container list__container">
+        <h1 class="list__title">Жизнь как сценарий</h1>
+        <h2 class="list__subtitle">5 фильмов, которые помогут настроиться на экзамены</h2>
+        <p class="list__description">
+          Готовиться к экзаменам — это битва не с учебниками, а со страхом, прокрастинацией и сомнениями. Эти фильмы —
+          ваша личная мотивационная аптечка.
+        </p>
+
+        <ul class="list__items">
+
+          <li class="list__item">
+            <h3 class="list__item-title"><span class="list__item-number">1.</span>выстоять и добиться</h3>
+            <img src="./images/articles/lists/article-scenariy-4/stand-and-deliver-big.jpg" class="list__item-image">
+            <div class="list__item-about">
+              <img src="./images/articles/lists/article-scenariy-4/stand-and-deliver-poster.jpg"
+                class="list__item-poster">
+              <div class="list__item-info">
+                <p class="list__item-name"><span class="list__item--bold">Выстоять и добиться</span></p>
+                <p class="list__item-subname">Stand and Deliver</p>
+                <p class="list__item-row">
+                  <span class="list__item-kinopoisk list__item-kinopoisk--green">8.0</span>
+                  <span class="list__item-year">1988</span>
+                  <span class="list__item-genre">Драма</span>
+                  <span class="list__item-rating">12+</span>
+                  <span class="list__item-country">США</span>
+                </p>
+                <p class="list__item-durartion">Длительность: <span class="list__item--bold">1 ч 43 мин</span></p>
+                <p class="list__item-director">Режиссер: <span class="list__item--bold">Рамон Менендес</span></p>
+                <p class="list__item-actors">Актеры: <span class="list__item--bold">Эдвард Джеймс Олмос, Эстель Харрис,
+                    Марк Элиот</span></p>
+              </div>
+            </div>
+            <p class="list__item-description">Учитель математики в неблагополучной школе Лос-Анджелеса бросает вызов
+              системе и готовит своих учеников к сдаче экзамена по высшей математике. Несмотря на насмешки и обвинения в
+              списывании, его студенты доказывают, что упорство сильнее предрассудков.</p>
+            <p class="list__item-description">Фильм наглядно показывает: даже если от тебя никто ничего не ждёт, а
+              времени в обрез, концентрация и вера в себя творят чудеса.</p>
+          </li>
+
+          <li class="list__item">
+            <h3 class="list__item-title"><span class="list__item-number">2.</span>общество мёртвых поэтов</h3>
+            <img src="./images/articles/lists/article-scenariy-4/dead-poets-society-big.jpg"
+              alt="Кадр из фильма 'Общество мёртвых поэтов'" class="list__item-image">
+            <div class="list__item-about">
+              <img src="./images/articles/lists/article-scenariy-4/dead-poets-society-poster.jpg"
+                alt="Постер фильма 'Общество мёртвых поэтов'" class="list__item-poster">
+              <div class="list__item-info">
+                <p class="list__item-name"><span class="list__item--bold">Общество мёртвых поэтов</span></p>
+                <p class="list__item-subname">Dead Poets Society</p>
+                <p class="list__item-row">
+                  <span class="list__item-kinopoisk list__item-kinopoisk--green">8.2</span>
+                  <span class="list__item-year">1989</span>
+                  <span class="list__item-genre">Драма</span>
+                  <span class="list__item-rating">12+</span>
+                  <span class="list__item-country">США</span>
+                </p>
+                <p class="list__item-durartion">Длительность: <span class="list__item--bold">2 ч 8 мин</span></p>
+                <p class="list__item-director">Режиссер: <span class="list__item--bold">Питер Уир</span></p>
+                <p class="list__item-actors">Актеры: <span class="list__item--bold">Робин Уильямс, Роберт Шон Леонард,
+                    Итан Хоук</span></p>
+              </div>
+            </div>
+            <p class="list__item-description">В элитной академии с вековыми традициями появляется учитель литературы,
+              который учит ребят «ловить момент» и искать свой собственный голос.</p>
+            <p class="list__item-description">Лучшее кино для тех, кто боится не оправдать ожидания родителей или зубрит
+              нелюбимый предмет «для корочки». Фильм возвращает ощущение, что учёба — это не обязанность, а возможность
+              стать собой.</p>
+          </li>
+
+          <li class="list__item">
+            <h3 class="list__item-title"><span class="list__item-number">3.</span>умница уилл хантинг</h3>
+            <img src="./images/articles/lists/article-scenariy-4/good-will-hunting-big.jpg"
+              alt="Кадр из фильма 'Умница Уилл Хантинг'" class="list__item-image">
+            <div class="list__item-about">
+              <img src="./images/articles/lists/article-scenariy-4/good-will-hunting-poster.jpg"
+                alt="Постер фильма 'Умница Уилл Хантинг'" class="list__item-poster">
+              <div class="list__item-info">
+                <p class="list__item-name"><span class="list__item--bold">Умница Уилл Хантинг</span></p>
+                <p class="list__item-subname">Good Will Hunting</p>
+                <p class="list__item-row">
+                  <span class="list__item-kinopoisk list__item-kinopoisk--green">8.1</span>
+                  <span class="list__item-year">1997</span>
+                  <span class="list__item-genre">Драма, мелодрама</span>
+                  <span class="list__item-rating">16+</span>
+                  <span class="list__item-country">США</span>
+                </p>
+                <p class="list__item-durartion">Длительность: <span class="list__item--bold">2 ч 6 мин</span></p>
+                <p class="list__item-director">Режиссер: <span class="list__item--bold">Гас Ван Сент</span></p>
+                <p class="list__item-actors">Актеры: <span class="list__item--bold">Мэтт Дэймон, Робин Уильямс, Бен
+                    Аффлек</span></p>
+              </div>
+            </div>
+            <p class="list__item-description">Молодой уборщик из Бостона с гениальным математическим умом боится своего
+              потенциала. Он решает любые задачи, но боится шагнуть в новую жизнь.</p>
+            <p class="list__item-description">Идеальный фильм о синдроме самозванца. Уилл доказывает: даже самый высокий
+              IQ бесполезен, если ты не веришь в себя и не меняешься.</p>
+          </li>
+
+          <li class="donation">
+            <p class="donation__text">Понравился материал? Вы можете поддержать автора монеткой</p>
+            <a href="https://www.donationalerts.com/r/kinogid1" class="donation__link" target="_blank"
+              rel="noopener noreferrer">
+              <!-- SVG-иконка сердца -->
+              <svg class="donation__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
+                fill="currentColor">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+              Поддержать КиноГид
+            </a>
+          </li>
+
+          <li class="list__item">
+            <h3 class="list__item-title"><span class="list__item-number">4.</span>блондинка в законе</h3>
+            <img src="./images/articles/lists/article-scenariy-4/legally-blonde-big.jpg"
+              alt="Кадр из фильма 'Блондинка в законе'" class="list__item-image">
+            <div class="list__item-about">
+              <img src="./images/articles/lists/article-scenariy-4/legally-blonde-poster.jpg"
+                alt="Постер фильма 'Блондинка в законе'" class="list__item-poster">
+              <div class="list__item-info">
+                <p class="list__item-name"><span class="list__item--bold">Блондинка в законе</span></p>
+                <p class="list__item-subname">Legally Blonde</p>
+                <p class="list__item-row">
+                  <span class="list__item-kinopoisk list__item-kinopoisk--green">6.8</span>
+                  <span class="list__item-year">2001</span>
+                  <span class="list__item-genre">Комедия, мелодрама</span>
+                  <span class="list__item-rating">12+</span>
+                  <span class="list__item-country">США</span>
+                </p>
+                <p class="list__item-durartion">Длительность: <span class="list__item--bold">1 ч 36 мин</span></p>
+                <p class="list__item-director">Режиссер: <span class="list__item--bold">Роберт Лукетич</span></p>
+                <p class="list__item-actors">Актеры: <span class="list__item--bold">Риз Уизерспун, Люк Уилсон, Сельма
+                    Блэр</span></p>
+              </div>
+            </div>
+            <p class="list__item-description">Вопреки стереотипам, гламурная блондинка поступает в Гарвардскую школу
+              права и с блеском доказывает, что красота и ум не исключают друг друга.</p>
+            <p class="list__item-description">Гимн «софт скиллс» (мягких навыков). Эль Вудс побеждает не заучиванием
+              кодексов, а нестандартным мышлением и харизмой.</p>
+          </li>
+
+          <li class="list__item">
+            <h3 class="list__item-title"><span class="list__item-number">5.</span>в погоне за счастьем</h3>
+            <img src="./images/articles/lists/article-scenariy-4/the-pursuit-of-happyness-big.jpg"
+              alt="Кадр из фильма 'В погоне за счастьем'" class="list__item-image">
+            <div class="list__item-about">
+              <img src="./images/articles/lists/article-scenariy-4/the-pursuit-of-happyness-poster.jpg"
+                alt="Постер фильма 'В погоне за счастьем'" class="list__item-poster">
+              <div class="list__item-info">
+                <p class="list__item-name"><span class="list__item--bold">В погоне за счастьем</span></p>
+                <p class="list__item-subname">The Pursuit of Happyness</p>
+                <p class="list__item-row">
+                  <span class="list__item-kinopoisk list__item-kinopoisk--green">8.3</span>
+                  <span class="list__item-year">2006</span>
+                  <span class="list__item-genre">Драма, биография</span>
+                  <span class="list__item-rating">12+</span>
+                  <span class="list__item-country">США</span>
+                </p>
+                <p class="list__item-durartion">Длительность: <span class="list__item--bold">1 ч 57 мин</span></p>
+                <p class="list__item-director">Режиссер: <span class="list__item--bold">Габриэле Муччино</span></p>
+                <p class="list__item-actors">Актеры: <span class="list__item--bold">Уилл Смит, Джейден Смит, Тандиве
+                    Ньютон</span></p>
+              </div>
+            </div>
+            <p class="list__item-description">Бездомный отец-одиночка проходит неоплачиваемую стажировку в брокерской
+              компании. У него нет крыши над головой, но есть цель.</p>
+            <p class="list__item-description">Фильм учит не жаловаться и не искать оправданий. Просто решай задачу здесь
+              и сейчас, даже если кажется, что мир рухнул.</p>
+          </li>
+
+        </ul>
+
+        <div class="list__author">
+          <p class="list__author-name">Автор: <span class="list__author--bold">Ирина Тарасова</span></p>
+          <p class="list__author-source">Фото: <span class="list__author--bold">Pinterest</span></p>
+          <p class="list__author-date">30 мая 2026</p>
+        </div>
+        <div class="feedback">
+          <p class="feedback__text">Поделитесь своим мнением о материале или предложите фильм для следующего разбора!
+          </p>
+          <form action="help-kino.gid@mail.ru" method="POST" class="feedback__form">
+            <input type="email" name="email" class="feedback__input" placeholder="Ваш email (опционально)" required>
+            <textarea name="message" class="feedback__textarea" placeholder="Ваш отзыв или идея..." required></textarea>
+            <button type="submit" class="feedback__button">
+              <svg class="feedback__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
+                fill="currentColor">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+              </svg>
+              Отправить отзыв
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="logo logo--footer">
+        <a href="./index.html" class="logo__link">
+          <img class="logo__image" src="./icons/logo.svg" alt="Киногид" class="logo__image">
+        </a>
+      </div>
+      <div class="footer__menu-wrapper">
+        <nav class="footer__menu">
+          <h3 class="footer__title">Разделы</h3>
+          <ul class="footer__list">
+            <li><a href="./rubric-1.html" class="footer__link">Кинотерапия</a></li>
+            <li><a href="./rubric-2.html" class="footer__link">Жизнь как сценарий</a></li>
+            <li><a href="./rubric-3.html" class="footer__link">Гардероб героя</a></li>
+            <li><a href="./rubric-4.html" class="footer__link">После титров</a></li>
+            <li><a href="./dictionary.html" class="footer__link">Словарь</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__menu">
+          <h3 class="footer__title">Полезные ссылки:</h3>
+          <ul class="footer__list">
+            <li><a href="mailto:help-kino.gid@mail.ru" class="footer__link">help-kino.gid@mail.ru</a></li>
+            <li><a href="https://www.donationalerts.com/r/kinogid1" class="footer__link">Поддержать проект</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__menu">
+          <h3 class="footer__title">Наши соц. сети</h3>
+          <ul class="footer__list">
+
+            <li class="footer__item">
+              <a href="https://vk.com/club237321445" class="footer__link" aria-label="Мы в ВКонтакте">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="60" height="60" rx="10" fill="currentColor" />
+                  <path
+                    d="M44.3122 17.0316C44.5218 15.8595 44.3122 15 43.3211 15H40.0379C39.2025 15 38.8207 15.7436 38.6111 16.5602C38.6111 16.5602 36.9418 23.4137 34.5764 27.8575C33.8128 29.1506 33.464 29.5589 33.0478 29.5589C32.8397 29.5589 32.5373 29.1506 32.5373 27.9785V17.0316C32.5373 15.6251 32.2963 15 31.6001 15H26.441C25.92 15 25.6056 15.6503 25.6056 16.2704C25.6056 17.6012 26.7883 17.9088 26.9096 21.6594V29.7958C26.9096 31.5779 26.7195 31.903 26.3003 31.903C25.1879 31.903 22.4811 25.0244 20.8747 17.1501C20.5618 15.6201 20.2459 15.0025 19.4075 15.0025H16.1258C15.1871 15.0025 15 15.7461 15 16.5628C15 18.0297 16.1124 25.289 20.1815 34.8899C22.8943 41.446 26.7135 45 30.1928 45C32.2783 45 32.5358 44.2111 32.5358 42.8499V37.8945C32.5358 36.3166 32.7349 35.999 33.3951 35.999C33.8802 35.999 34.7156 36.4124 36.6634 39.5707C38.8881 43.3162 39.2564 44.9975 40.5065 44.9975H43.7882C44.7254 44.9975 45.194 44.2085 44.9245 42.6508C44.6295 41.1007 43.5666 38.8447 42.1563 36.1754C41.3898 34.653 40.2445 33.0146 39.8956 32.1954C39.4091 31.1393 39.5498 30.673 39.8956 29.7353C39.8971 29.7379 43.896 20.2554 44.3122 17.0316Z"
+                    fill="black" />
+                </svg>
+                <span class="footer__link-text">ВКонтакте</span>
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a href="https://t.me/KinooGidd" class="footer__link" aria-label="Наш Telegram">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="60" height="60" rx="10" fill="currentColor" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M32.3143 38.7093L28.1331 42.9855L26.951 43.181L24.3057 32.057L15 28.3268L43.6486 15L45 15.0369L40.4862 45L32.3143 38.7093ZM39.4795 20.6303L26.3524 30.2343L27.8641 38.1042L28.2782 37.9898L29.8564 31.9168L40.3472 20.7557L39.4795 20.6303Z"
+                    fill="black" />
+                </svg>
+                <span class="footer__link-text">Telegram</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__bottom-text">&copy; 2026 Киногид. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
